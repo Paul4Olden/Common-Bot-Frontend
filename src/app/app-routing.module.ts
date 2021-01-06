@@ -11,13 +11,6 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   {
-    path: 'auth',
-    loadChildren: () =>
-      import('./layout/empty-layout/empty-layout.module').then(
-        (m) => m.EmptyLayoutModule
-      ),
-  },
-  {
     path: 'posting',
     loadChildren: () =>
       import('./components/posting/posting.module').then(
