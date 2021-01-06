@@ -120,3 +120,8 @@ h1 {
   max-width: 696px;
   width: 100%;
 }
+
+::ng-deep .froala-editor .fr-wrapper div:first-child {
+  display: none !important;
+  height: 0px !important;
+}
