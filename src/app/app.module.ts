@@ -9,6 +9,7 @@ import { StoreModule } from '@ngrx/store';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BotbadgeComponent, SearchbotsComponent, SearchbotsortComponent, NavBarComponent, LoginComponent, RegisterComponent, UserpanelComponent } from './components';
+import { PostingModule } from './components/posting/posting.module';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -33,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     SharedModule,
     HttpClientModule,
+    PostingModule
   ],
   bootstrap: [AppComponent],
 })

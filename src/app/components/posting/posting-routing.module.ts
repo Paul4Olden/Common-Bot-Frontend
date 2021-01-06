@@ -4,9 +4,6 @@ import { NewPostingComponent } from './containers/new-posting/new-posting.compon
 
 const routes: Routes = [
   {
-    path: '',
-  },
-  {
     path: 'new-post',
     component: NewPostingComponent,
   },
