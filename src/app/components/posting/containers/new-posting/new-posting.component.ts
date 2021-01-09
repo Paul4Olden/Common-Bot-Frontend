@@ -7,6 +7,7 @@ import {
 } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import Quill from 'quill'
 
 @Component({
   selector: 'app-new-posting',
@@ -58,10 +59,49 @@ export class NewPostingComponent implements OnInit {
     autofocus: true,
   };
 
-  constructor() {}
+  modules = {}
+
+  constructor() {
+    this.modules = {
+      "emoji-shortname": true,
+      "emoji-textarea": true,
+      "emoji-toolbar": true,
+      toolbar: [
+        ["bold", "italic", "underline", "strike"], // toggled buttons
+        ["blockquote", "code-block"],
+
+        [{ header: 1 }, { header: 2 }], // custom button values
+        [{ list: "ordered" }, { list: "bullet" }],
+        [{ script: "sub" }, { script: "super" }], // superscript/subscript
+        [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+        [{ direction: "rtl" }], // text direction
+
+        [{ size: ["small", false, "large", "huge"] }], // custom dropdown
+        [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+        [{ align: [] }],
+
+        ["clean"], // remove formatting button
+
+        ["link", "image", "video"], // link and image, video
+        ["emoji"]
+      ]
+    };
+  }
 
   ngOnInit(): void {
     this.createForm();
+
+    let Font = Quill.import('formats/font');
+
+    Font.whitelist = ['mirza', 'roboto'];
+    Quill.register(Font, true);
+
+    let quill = new Quill('#editor-container', {
+      modules: {
+        toolbar: '#toolbar-container'
+      },
+      theme: 'snow'
+    });
   }
 
   onSubmit(): void {

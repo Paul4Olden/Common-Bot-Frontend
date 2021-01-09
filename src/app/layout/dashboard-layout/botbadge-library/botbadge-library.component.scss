@@ -1,0 +1,128 @@
+.bot-badge {
+  width: 200px - 32px;
+  height: 232px - 32px;
+  padding: 16px;
+  background: #F4F7F9;
+  margin: 16px 32px 16px 0;
+  text-align: center;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-template-rows: 1fr 7fr 4fr 1fr 1fr;
+  grid-template-areas:
+    "a a"
+    "b b"
+    "c c"
+    "d e"
+    "f f";
+
+  &:hover {
+    background: rgba(175, 191, 249, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &__name {
+    grid-area: a;
+    text-align: left;
+    align-self: flex-end;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &__description {
+    grid-area: b;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: #666666;
+  }
+
+  &__rating{
+    grid-area: e;
+    text-align: left;
+    align-self: flex-start;
+    ont-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: #666666;
+    p {
+      margin: 0;
+      display: inline;
+      margin-left: 3px;
+      vertical-align: super;
+    }
+  }
+
+  &__author {
+    grid-area: c;
+    text-align: left;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: #666666;
+  }
+
+  &__people {
+    grid-area: d;
+    text-align: left;
+    align-self: flex-start;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: #666666;
+    p {
+      margin: 0;
+      display: inline;
+      margin-left: 10px;
+      vertical-align: super;
+    }
+  }
+
+  &__button {
+    grid-area: f;
+    justify-self: center;
+    align-self: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #10B1B5;
+    border-radius: 4px;
+    padding: 8px 0 8px 0;
+    width: 168px;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: #10B1B5;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+  background: #E4E8EB;
+}
+
+::ng-deep .mat-progress-bar {
+  border-radius: 2px;
+}

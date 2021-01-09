@@ -1,0 +1,11 @@
+.content {
+  display: grid;
+  grid-template-columns: 420px 704px;
+  grid-template-rows: 308px  1140px 1140px;
+}
+
+.statistic {
+  &__header h1 {
+    display: inline;
+  }
+}

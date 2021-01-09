@@ -26,8 +26,6 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "./node_modules/froala-editor/css/froala_editor.pkgd.css",
-              "./node_modules/froala-editor/css/froala_style.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -89,8 +87,6 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "./node_modules/froala-editor/css/froala_editor.pkgd.css",
-              "./node_modules/froala-editor/css/froala_style.min.css",
               "src/styles.scss"
             ],
             "scripts": []

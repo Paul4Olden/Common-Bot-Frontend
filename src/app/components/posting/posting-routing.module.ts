@@ -1,11 +1,11 @@
+import { PostEditorComponent } from '../post-editor/post-editor.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NewPostingComponent } from './containers/new-posting/new-posting.component';
 
 const routes: Routes = [
   {
     path: 'new-post',
-    component: NewPostingComponent,
+    component: PostEditorComponent,
   },
 ];
 

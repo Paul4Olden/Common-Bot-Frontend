@@ -12,6 +12,7 @@ import { MatSelectModule } from '@angular/material/select';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatMenuModule,
     MatSelectModule,
     MatCheckboxModule,
+    MatProgressBarModule,
   ],
   exports: [
     MatToolbarModule,
@@ -41,6 +43,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatCheckboxModule,
     MatRadioModule,
     MatSelectModule,
+    MatProgressBarModule,
   ],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } },

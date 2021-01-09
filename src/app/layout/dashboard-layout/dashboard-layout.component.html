@@ -1,0 +1,46 @@
+<div class="flexbox">
+  
+  <div id="myBots">
+    <h2>Мои боты</h2>
+    <div class="search-panel">
+      <app-searchbots></app-searchbots>
+      <app-searchbotsort></app-searchbotsort>
+    </div>
+    <div class="bots-slider">
+      <div class="bot-add">
+        <svg width="54" height="58" viewBox="0 0 54 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24.6562 0.875H29.3438C29.7604 0.875 29.9688 1.08333 29.9688 1.5V56.5C29.9688 56.9167 29.7604 57.125 29.3438 57.125H24.6562C24.2396 57.125 24.0312 56.9167 24.0312 56.5V1.5C24.0312 1.08333 24.2396 0.875 24.6562 0.875Z" fill="#AFBFF9"/>
+          <path d="M0.75 26.0312H53.25C53.6667 26.0312 53.875 26.2396 53.875 26.6562V31.3438C53.875 31.7604 53.6667 31.9688 53.25 31.9688H0.75C0.333333 31.9688 0.125 31.7604 0.125 31.3438V26.6562C0.125 26.2396 0.333333 26.0312 0.75 26.0312Z" fill="#AFBFF9"/>
+        </svg>          
+        <h2>Создать бота</h2>
+      </div>
+      <app-botbadge
+        *ngFor="let bot of myBots"
+        [botId]="bot.botId"
+        [botName]="bot.botName"
+        [botDescription]="bot.botDescription"
+        [botChannels]="bot.botChannels"
+        [botPosts]="bot.botPosts"
+        [botPublishedPosts]="bot.botPublishedPosts"
+      ></app-botbadge>
+    </div>
+  </div>
+  <div id="botLibrary">
+    <h2>Библиотека ботов</h2>
+    <div class="search-panel">
+      <app-searchbots></app-searchbots>
+      <app-searchbotsort></app-searchbotsort>
+    </div>
+    <div class="bots-slider">
+      <app-botbadge-library
+        *ngFor="let bot of allBots"
+        [botId]="bot.botId"
+        [botName]="bot.botName"
+        [botDescription]="bot.botDescription"
+        [botPeople]="bot.botPeople"
+        [botAuthor]="bot.botAuthor"
+        [botRating]="bot.botRating"
+      ></app-botbadge-library>
+    </div>
+  </div>
+</div>

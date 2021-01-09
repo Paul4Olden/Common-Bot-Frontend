@@ -1,0 +1,26 @@
+.navbar { 
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.menu-spacer {
+  margin-left: 100px;
+}
+
+.navbar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.nav-links > a {
+  padding: 0 25px 0 25px;
+}
+
+.nav-link-developer {
+  margin-left: auto;
+  color: #FFFFFF;
+  background-color: #10B1B5;
+}

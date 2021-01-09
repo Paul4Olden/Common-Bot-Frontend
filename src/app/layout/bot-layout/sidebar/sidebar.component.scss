@@ -1,0 +1,86 @@
+.sidebar {
+  position: fixed;
+  height: 90vh;
+  width: 200px;
+  color: #666666;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  &__name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    padding-left: 76px;
+    padding-bottom: 16px;
+    padding-top: 40px;
+  }
+
+  &__sub-pallate {
+    padding-left: 30px;
+    align-self: flex-end;
+    margin-top: auto;
+  }
+}
+
+::ng-deep .sidebar .mat-sidenav-content {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.sidebar-link {
+  padding-left: 40px;
+  border-left: 4px solid #fff;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 0 !important;
+}
+
+::ng-deep .mat-expansion-panel-header.mat-expanded {
+  height: 40px !important;
+}
+
+::ng-deep .mat-expansion-panel-header {
+  height: 40px !important;
+  padding: 0 !important;
+}
+
+::ng-deep .mat-expansion-panel-spacing {
+  margin: 0 !important;
+}
+
+::ng-deep .mat-content {
+  flex: none !important;
+  padding-right: 20px;
+} 
+
+::ng-deep .mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+}
+
+::ng-deep .mat-accordion .mat-expansion-panel:first-of-type {
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  color: #666666;
+}
+
+::ng-deep .mat-accordion .mat-expansion-panel:last-of-type {
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+::ng-deep .mat-expansion-panel-header .mat-content {
+  padding-left: 40px;
+}
+
+::ng-deep .mat-expansion-panel-body .mat-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button {
+  padding: 0 !important;
+  padding-left: 76px !important;
+  border-radius: 0px !important;
+  display: block;
+}

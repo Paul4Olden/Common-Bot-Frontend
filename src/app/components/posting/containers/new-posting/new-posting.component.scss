@@ -1,7 +1,6 @@
 .new-post-page {
   background-color: #e5e5e5;
   padding: 19px 0;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -116,12 +115,28 @@ h1 {
   }
 }
 
-.froala-editor {
-  max-width: 696px;
-  width: 100%;
+#editor-container {
+  font-family: "Aref Ruqaa";
+  font-size: 18px;
+  height: 375px;
 }
 
-::ng-deep .froala-editor .fr-wrapper div:first-child {
-  display: none !important;
-  height: 0px !important;
+#toolbar-container .ql-font span[data-label="Aref Ruqaa"]::before {
+  font-family: "Aref Ruqaa";
+}
+
+#toolbar-container .ql-font span[data-label="Mirza"]::before {
+  font-family: "Mirza";
+}
+
+#toolbar-container .ql-font span[data-label="Roboto"]::before {
+  font-family: "Roboto";
+}
+
+.ql-font-mirza {
+  font-family: "Mirza";
+}
+
+.ql-font-roboto {
+  font-family: "Roboto";
 }

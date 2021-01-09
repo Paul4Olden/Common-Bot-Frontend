@@ -1,0 +1,16 @@
+<div class="bot-badge" [routerLink]="['/bot', botId]">
+  <h3 class="bot-badge__name">{{ botName }}</h3>
+  <p class="bot-badge__description">{{ botDescription }}</p>
+  <div class="bot-badge__published">
+    <p>Опубликованно: {{botPublishedPosts}}/{{botPosts}}</p>
+    <mat-progress-bar  mode="determinate" [value]="postPercents"></mat-progress-bar>
+  </div>
+  <span class="bot-badge__channels">
+    <p *ngIf="botChannels!=null">{{ botChannels }} канала</p>
+  </span>
+  <a class="bot-badge__button" mat-button>Далее 
+    <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666992 1.175L4.48366 5L0.666992 8.825L1.84199 10L6.84199 5L1.84199 0L0.666992 1.175Z" fill="#A4A4A4"/>
+    </svg>
+  </a>
+</div>

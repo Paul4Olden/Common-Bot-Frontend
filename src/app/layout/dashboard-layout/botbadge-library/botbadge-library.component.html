@@ -1,0 +1,23 @@
+<div class="bot-badge" >
+  <h3 class="bot-badge__name">{{ botName }}</h3>
+  <p class="bot-badge__description">{{ botDescription }}</p>
+  <div class="bot-badge__author">
+    <p>Автор: {{ botAuthor }}</p>
+  </div>
+  <span class="bot-badge__people">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8916 10.9417C15.0333 11.7167 15.8333 12.7667 15.8333 14.1667V16.6667H19.1666V14.1667C19.1666 12.35 16.1916 11.275 13.8916 10.9417Z" fill="#10B1B5"/>
+      <path d="M7.50033 10C9.34128 10 10.8337 8.50763 10.8337 6.66668C10.8337 4.82573 9.34128 3.33334 7.50033 3.33334C5.65938 3.33334 4.16699 4.82573 4.16699 6.66668C4.16699 8.50763 5.65938 10 7.50033 10Z" fill="#10B1B5"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4997 10C14.3413 10 15.833 8.50834 15.833 6.66668C15.833 4.82501 14.3413 3.33334 12.4997 3.33334C12.108 3.33334 11.7413 3.41668 11.3913 3.53334C12.1084 4.42019 12.4996 5.52618 12.4996 6.66668C12.4996 7.80717 12.1084 8.91316 11.3913 9.80001C11.7413 9.91668 12.108 10 12.4997 10ZM7.49967 10.8333C5.27467 10.8333 0.833008 11.95 0.833008 14.1667V16.6667H14.1663V14.1667C14.1663 11.95 9.72468 10.8333 7.49967 10.8333Z" fill="#10B1B5"/>
+    </svg>
+    <p>{{ botPeople }} человек</p>
+  </span>
+  <span class="bot-badge__rating" mat-button>
+    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33333 12.725L13.4833 15.8333L12.1167 9.975L16.6667 6.03333L10.675 5.525L8.33333 0L5.99167 5.525L0 6.03333L4.55 9.975L3.18333 15.8333L8.33333 12.725Z" fill="#FFB946"/>
+    </svg>
+      
+    <p>{{botRating | number:'1.1'}}</p>
+  </span>
+  <mat-button class="bot-badge__button" mat-button [routerLink]="['/bot', botId]">Подключить</mat-button>
+</div>

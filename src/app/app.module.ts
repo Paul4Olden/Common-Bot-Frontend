@@ -1,32 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from './material.module';
-import { AppRoutingModule, routedComponents } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
-import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BotbadgeComponent, SearchbotsComponent, SearchbotsortComponent, NavBarComponent, LoginComponent, RegisterComponent, UserpanelComponent } from './components';
-import { PostingModule } from './components/posting/posting.module';
 import { HttpClientModule } from '@angular/common/http';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
+import { LoginComponent, RegisterComponent } from './components';
+import { QuillModule } from "ngx-quill";
+import { DashboardLayoutModule } from './layout/dashboard-layout/dashboard-layout.module';
+import { MainLayoutModule } from './layout/main-layout/main-layout.module';
+import { BotLayoutModule } from './layout/bot-layout/bot-layout.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routedComponents,
     LoginComponent,
-    RegisterComponent,
-    NavBarComponent,
-    BotbadgeComponent,
-    SearchbotsComponent,
-    SearchbotsortComponent,
-    UserpanelComponent,
+    RegisterComponent
   ],
   imports: [
     ReactiveFormsModule,
-    MaterialModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,
@@ -34,7 +29,10 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     SharedModule,
     HttpClientModule,
-    PostingModule
+    QuillModule.forRoot(),
+    DashboardLayoutModule,
+    MainLayoutModule,
+    BotLayoutModule,
   ],
   bootstrap: [AppComponent],
 })
