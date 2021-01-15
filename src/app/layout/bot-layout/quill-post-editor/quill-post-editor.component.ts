@@ -18,7 +18,7 @@ export class QuillPostEditorComponent implements OnInit {
   created(event: Quill) {
   }
 
-  changedEditor(event: EditorChangeContent | EditorChangeSelection) {
+  changedEditor(event: any) {
     this.currentSymbols = event.text.length;
   }
 
