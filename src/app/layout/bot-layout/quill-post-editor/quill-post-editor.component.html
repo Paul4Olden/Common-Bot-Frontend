@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <div class="description">
+    Текст
+  </div>
+  <div class="right-description description">
+    {{currentSymbols}}/2000
+  </div>
+  <div class="post-editor__editor" #editor>
+    <quill-editor placeholder='Начните вводить Ваш текст...' (onContentChanged)="changedEditor($event)" class="editor" (onFocus)="focus($event)" >
+      <div 
+        #toolbar
+        class="ng-quill-editor-toolbar" 
+        quill-editor-toolbar
+        [ngClass]="{'hidden': focused === false}">
+        <span class="ql-formats">
+          <button class="ql-bold" [title]="'Bold'"></button>
+          <button class="ql-italic" [title]="'Italic'"></button>
+          <button class="ql-underline" [title]="'Underline'"></button>
+          <button class="ql-strike" [title]="'Strike'"></button>
+          
+        </span>
+        <span class="ql-formats divider"></span>
+        <span class="ql-formats">
+          <select class="ql-font">
+            <option selected>Default</option>
+            <option value="monospace">Monospace</option>
+          </select>
+        </span>
+        <span class="ql-formats divider"></span>
+        <span class="ql-formats">
+          <button class="ql-link"></button>
+          <button class="ql-emoji"></button>
+        </span>
+      </div>
+    </quill-editor>
+  </div>
+</div>

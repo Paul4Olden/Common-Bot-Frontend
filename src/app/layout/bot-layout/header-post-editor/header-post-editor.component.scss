@@ -1,0 +1,17 @@
+.header-input {
+  outline: none;
+  border: none;
+  padding: 12px 15px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  color: #121212;
+  text-transform: uppercase;
+  width: 90%;
+
+  &::placeholder {
+    color: #A4A4A4;
+  }
+}

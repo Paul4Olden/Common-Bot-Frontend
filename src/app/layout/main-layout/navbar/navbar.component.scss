@@ -2,6 +2,12 @@
   width: 100%;
   position: fixed;
   z-index: 100;
+  background-color: #F4F7F9;
+}
+
+.logo {
+  background-color: #fff;
+  width: 200px;
 }
 
 .menu-spacer {
@@ -23,4 +29,8 @@
   margin-left: auto;
   color: #FFFFFF;
   background-color: #10B1B5;
+}
+
+::ng-deep .mat-toolbar-row, .mat-toolbar-single-row{
+  padding: 0 !important;
 }

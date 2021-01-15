@@ -1,3 +1,5 @@
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,14 +11,20 @@ import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
 import { QuillModule } from "ngx-quill";
-import { PostEditorComponent } from './../../components/post-editor/post-editor.component';
+import { PostEditorComponent } from './post-editor/post-editor.component';
+import { QuillPostEditorComponent } from './quill-post-editor/quill-post-editor.component';
+import { HeaderPostEditorComponent } from './header-post-editor/header-post-editor.component';
+import { FilePostEditorComponent } from './file-post-editor/file-post-editor.component';
 
 @NgModule({
   declarations: [
     BotLayoutComponent,
     SidebarComponent,
     BotInformationComponent,
-    PostEditorComponent
+    PostEditorComponent,
+    QuillPostEditorComponent,
+    HeaderPostEditorComponent,
+    FilePostEditorComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +33,9 @@ import { PostEditorComponent } from './../../components/post-editor/post-editor.
     MatListModule,
     MatExpansionModule,
     MatButtonModule,
-    QuillModule
+    QuillModule,
+    MatMenuModule,
+    MatIconModule
   ],
   exports: [
     CommonModule,
@@ -34,7 +44,9 @@ import { PostEditorComponent } from './../../components/post-editor/post-editor.
     MatListModule,
     MatExpansionModule,
     MatButtonModule,
-    QuillModule
+    QuillModule,
+    MatMenuModule,
+    MatIconModule
   ]
 })
 export class BotLayoutModule { }

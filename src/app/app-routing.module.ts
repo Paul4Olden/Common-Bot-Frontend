@@ -8,7 +8,7 @@ import { DashboardLayoutComponent } from './layout/dashboard-layout/dashboard-la
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-import { PostEditorComponent } from './components/post-editor/post-editor.component';
+import { PostEditorComponent } from './layout/bot-layout/post-editor/post-editor.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },

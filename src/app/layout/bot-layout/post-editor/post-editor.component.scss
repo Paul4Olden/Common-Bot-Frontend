@@ -1,0 +1,39 @@
+.post-page {
+  padding-top: 50px;
+}
+
+.header h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.post-editor { 
+  margin-top: 40px;
+  padding-top: 20px;
+  background-color: #FFF;
+  min-height: 70vh;
+  border-radius: 8px;
+  padding-right: 30px;
+
+  &__content {
+    grid-area: b;
+    padding-left: 50px;
+  }
+
+  &__button {
+    display: inline-block;
+    color: #A4A4A4;
+  }
+
+  &__text {
+    line-height: 150%;
+    font-size: 16px;
+    display: inline-block;
+    color: #A4A4A4;
+  }
+}
+

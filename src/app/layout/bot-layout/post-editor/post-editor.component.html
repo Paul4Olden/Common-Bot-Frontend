@@ -1,33 +1,31 @@
-<div class="post-editor flexbox">
-  <div class="post-editor__header">
-    <div class="post-editor__editor">
-      <quill-editor id="editor-container">
-        <div quill-editor-toolbar>
-          <span class="ql-formats">
-            <select class="ql-font">
-              <option selected>Aref Ruqaa</option>
-              <option value="mirza">Mirza</option>
-              <option value="roboto">Roboto</option>
-            </select>
-          </span>
-        </div>
-      </quill-editor>
+<div class="post-page flexbox">
+  <div class="header">
+    <h1>Новый пост</h1>
+  </div>
+  <div class="post-editor">
+    
+    <div class="post-editor__content" *ngFor="let item of elements">
+      <app-header-post-editor *ngIf="item.type === 'Header'"></app-header-post-editor>
+      <app-quill-post-editor *ngIf="item.type === 'Text'"></app-quill-post-editor>
+      <app-file-post-editor text="Изображение" description="png, jpg, webp" *ngIf="item.type === 'Image'"></app-file-post-editor>
+      <app-file-post-editor text="Аудио" description="mp3, wav, flac" *ngIf="item.type === 'Audio'"></app-file-post-editor>
+      <app-file-post-editor text="Файл" *ngIf="item.type === 'File'"></app-file-post-editor>
     </div>
-  </div>
-  <div class="post-editor__editor">
-    <quill-editor id="editor-container"  >
-      <div quill-editor-toolbar>
-        <span class="ql-formats">
-          <select class="ql-font">
-            <option selected>Aref Ruqaa</option>
-            <option value="mirza">Mirza</option>
-            <option value="roboto">Roboto</option>
-          </select>
-        </span>
-      </div>
-    </quill-editor>
-  </div>
-  <div class="post-editor__image">
-
-  </div>
+    <div class="post-editor__button">
+      <button mat-button [matMenuTriggerFor]="menu"><mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="addElement({type: 'Header', title: '', position: currentPosition})">Заголовок</button>
+        <button mat-menu-item (click)="addElement({type: 'Text', text: '', position: currentPosition})">Текст</button>
+        <button mat-menu-item (click)="addElement({type: 'Image', file: undefined, position: currentPosition})">Фото</button>
+        <button mat-menu-item (click)="addElement({type: 'Audio', file: undefined, position: currentPosition})">Аудио</button>
+        <button mat-menu-item (click)="addElement({type: 'File', file: undefined, position: currentPosition})">Файл</button>
+        <button mat-menu-item>Опрос</button>
+        <button mat-menu-item>Клавиатура</button>
+      </mat-menu>
+    </div>
+    <div class="post-editor__text">
+      <h3>Выберите инструмент слева</h3>
+    </div>
+  </div>  
 </div>

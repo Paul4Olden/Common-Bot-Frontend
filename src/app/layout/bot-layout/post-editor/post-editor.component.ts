@@ -1,5 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import { element } from 'protractor';
+import { QuillPostEditorComponent } from './../quill-post-editor/quill-post-editor.component';
+import { Component, Renderer2, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Quill } from 'quill';
+import { EditorChangeContent, EditorChangeSelection } from 'ngx-quill'
+
+type PostType = 'Image' | 'Video' | 'File' | 'Audio' | 'Text' | 'Header' | 'Poll' | 'Keyboard';
+
+interface PostHeader {
+  type: PostType;
+  title: string;
+  position: number;
+}
+
+interface PostText {
+  type: PostType;
+  text: string;
+  position: number;
+}
+
+interface PostFile {
+  type: PostType;
+  file: File;
+  position: number;
+}
+
+interface PostPoll {
+  type: PostType;
+  poll: any;
+  position: number;
+}
+
+interface PostKeyboard {
+  type: PostType;
+  keyboard: any;
+  position: number;
+}
+
+type Post = PostHeader | PostText | PostFile | PostPoll | PostKeyboard;
 
 @Component({
   selector: 'app-post-editor',
@@ -7,37 +44,23 @@ import { Quill } from 'quill';
   styleUrls: ['./post-editor.component.scss']
 })
 export class PostEditorComponent implements OnInit {
+  elements: Post[] = [{
+    type: 'Header',
+    title: '',
+    position: 0
+  }];
+  currentPosition: number = 1;
 
-  modules = {}
-
-  constructor() {
-    this.modules = {
-      "emoji-shortname": true,
-      "emoji-textarea": true,
-      "emoji-toolbar": true,
-      toolbar: [
-        ["bold", "italic", "underline", "strike"], // toggled buttons
-        ["blockquote", "code-block"],
-
-        [{ header: 1 }, { header: 2 }], // custom button values
-        [{ list: "ordered" }, { list: "bullet" }],
-        [{ script: "sub" }, { script: "super" }], // superscript/subscript
-        [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
-        [{ direction: "rtl" }], // text direction
-
-        [{ size: ["small", false, "large", "huge"] }], // custom dropdown
-        [{ color: [] }, { background: [] }], // dropdown with defaults from theme
-        [{ align: [] }],
-
-        ["clean"], // remove formatting button
-
-        ["link", "image", "video"], // link and image, video
-        ["emoji"]
-      ]
-    };
+  constructor() { 
+    
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
+  addElement(element: Post) {
+    console.log(element);
+    this.elements.push(element);
+    this.currentPosition++;
+  }
 }

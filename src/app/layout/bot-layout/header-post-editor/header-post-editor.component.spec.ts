@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StatisticComponent } from './statistic.component';
+import { HeaderPostEditorComponent } from './header-post-editor.component';
 
-describe('StatisticComponent', () => {
-  let component: StatisticComponent;
-  let fixture: ComponentFixture<StatisticComponent>;
+describe('HeaderPostEditorComponent', () => {
+  let component: HeaderPostEditorComponent;
+  let fixture: ComponentFixture<HeaderPostEditorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StatisticComponent ]
+      declarations: [ HeaderPostEditorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StatisticComponent);
+    fixture = TestBed.createComponent(HeaderPostEditorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

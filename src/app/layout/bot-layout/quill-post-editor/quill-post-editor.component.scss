@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+.description {
+  padding-left: 12px;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #979797;
+  display: inline-block;
+}
+
+.right-description {
+  float: right;
+}
+
+.ng-quill-editor-toolbar {
+  position: absolute;
+  transform: translateY(40px);
+  z-index: 99;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 4px 4px #E9E9E9;
+}
+
+::ng-deep .ql-container {
+  border: none !important;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+}
+
+::ng-deep .ql-font-monospace {
+  font-family:'Roboto Mono', monospace !important;
+} 
+
+.hidden {
+  display: none;
+}
+
+.divider {
+  height: 20px;
+  border: 1px solid #E5E5E5;
+  margin-top: 1px !important;
+}

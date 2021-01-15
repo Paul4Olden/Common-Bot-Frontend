@@ -1,11 +1,30 @@
 .content {
   display: grid;
-  grid-template-columns: 420px 704px;
-  grid-template-rows: 308px  1140px 1140px;
+  grid-template-rows: 320px  340px 550px;
 }
 
 .statistic {
-  &__header h1 {
-    display: inline;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 2fr 6fr;
+  grid-template-areas: 
+    "a a"
+    "b c";
+
+  &__header {
+    grid-area: a;
+    
+    h1 {
+      display: inline;
+      padding-right: 20px;
+    }
+  }
+
+  &__posts {
+    grid-area: b;
+  }
+
+  &__subscribers {
+    grid-area: c;
   }
 }

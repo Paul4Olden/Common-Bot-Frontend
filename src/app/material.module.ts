@@ -37,7 +37,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatSelectModule,
     MatDividerModule,
     MatMenuModule,
-    MatCheckboxModule,
     MatButtonModule,
     MatIconModule,
     MatCheckboxModule,
